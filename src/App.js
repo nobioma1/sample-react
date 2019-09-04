@@ -1,8 +1,8 @@
-const Car = props => {
+const Car = ({ make, model, year }) => {
   return React.createElement('div', {}, [
-    React.createElement('h1', {}, props.make),
-    React.createElement('h2', {}, props.model),
-    React.createElement('h2', {}, props.year),
+    React.createElement('h1', {}, make),
+    React.createElement('h2', {}, model),
+    React.createElement('h2', {}, year),
   ]);
 };
 
