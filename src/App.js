@@ -1,8 +1,8 @@
-const Car = () => {
+const Car = props => {
   return React.createElement('div', {}, [
-    React.createElement('h1', {}, 'Mercedes-Benz'),
-    React.createElement('h2', {}, 'G-Wagon'),
-    React.createElement('h2', {}, '2019'),
+    React.createElement('h1', {}, props.make),
+    React.createElement('h2', {}, props.model),
+    React.createElement('h2', {}, props.year),
   ]);
 };
 
@@ -13,8 +13,16 @@ const App = () => {
     // React.createElement(htmlTag, {<attributes>}, children)
     [
       React.createElement('h1', {}, 'Sample React'),
-      React.createElement(Car),
-      React.createElement(Car),
+      React.createElement(Car, {
+        make: 'Mercedes-Benz',
+        model: 'G-wagon',
+        year: '2019',
+      }),
+      React.createElement(Car, {
+        make: 'Lexus',
+        model: 'LC 500',
+        year: '2019',
+      }),
     ]
   );
 };
