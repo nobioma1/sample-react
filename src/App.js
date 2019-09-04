@@ -1,10 +1,6 @@
-const Car = ({ make, model, year }) => {
-  return React.createElement('div', {}, [
-    React.createElement('h1', {}, make),
-    React.createElement('h2', {}, model),
-    React.createElement('h2', {}, year)
-  ]);
-};
+import React from 'react';
+import { render } from 'react-dom';
+import Car from './Car';
 
 const App = () => {
   return React.createElement(
@@ -27,4 +23,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById('root'));
+render(React.createElement(App), document.getElementById('root'));
