@@ -2,7 +2,7 @@ const Car = ({ make, model, year }) => {
   return React.createElement('div', {}, [
     React.createElement('h1', {}, make),
     React.createElement('h2', {}, model),
-    React.createElement('h2', {}, year),
+    React.createElement('h2', {}, year)
   ]);
 };
 
@@ -16,13 +16,13 @@ const App = () => {
       React.createElement(Car, {
         make: 'Mercedes-Benz',
         model: 'G-wagon',
-        year: '2019',
+        year: '2019'
       }),
       React.createElement(Car, {
         make: 'Lexus',
         model: 'LC 500',
-        year: '2019',
-      }),
+        year: '2019'
+      })
     ]
   );
 };
