@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import ThemeContext from './ThemeContext';
 
 const Search = () => {
   const [location, setLocation] = useState('San Francisco');
-
+  const [theme] = useContext(ThemeContext);
   return (
     <div>
       <form>
@@ -15,7 +16,7 @@ const Search = () => {
             onChange={e => setLocation(e.target.value)}
           />
         </label>
-        <button>Submit</button>
+        <button style={{ backgroundColor: theme }}>Submit</button>
       </form>
     </div>
   );
