@@ -23,3 +23,16 @@ const Search = () => {
 };
 
 export default Search;
+
+/* 
+  // Using Context with Class Components
+  <ThemeContext.Consumer>
+    {
+      ([theme]) => (
+        <button style={{ backgroundColor: theme }}>
+          Submit
+        </button>
+      )
+    }
+  </ThemeContext.Consumer>
+*/
